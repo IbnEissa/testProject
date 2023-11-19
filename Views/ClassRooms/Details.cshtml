@@ -1,0 +1,29 @@
+﻿@model SchoolManagementSystemASPProject.Models.ClassRoom
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="row justify-content-center " style="margin-top:150px; ">تفاصيل الفصول الدراسية</h1>
+<hr />
+
+<div class="row justify-content-center ">
+    <dl class="row">
+        <dt class="col-sm-2">
+            الاسم :
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+
+</div>
+<div>
+    <button type="button" class="btn btn-warning">
+        <i class="bi bi-pencil-square"></i>  <a asp-action="Edit" asp-route-id="@Model?.Id">تعديل</a>
+
+    </button>
+    <div style="direction:ltr; margin-bottom: 350px" ;>
+        <a asp-action="Index" class="btn btn-secondary">العودة للقائمة</a>
+    </div>
+</div>

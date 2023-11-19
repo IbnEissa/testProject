@@ -1,0 +1,60 @@
+﻿@model IEnumerable<SchoolManagementSystemASPProject.Models.Student>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_Layout";
+
+}
+
+<h1 style="margin-top:150px;">بيانات الطلاب</h1>
+
+<p style="direction:ltr; color:white;">
+    <button type="button" class="btn btn-primary"><i class="bi bi-plus"></i> @Html.ActionLink("طالب جديد","Create","Students")</button>
+</p>
+<table class="table" style="margin-bottom:350px;">
+    <thead>
+        <tr>
+            <th>
+                الاسم
+            </th>
+            <th>
+                تاريخ الميلاد :
+            </th>
+            <th>
+                الهاتف :
+            </th>
+            <th>
+                الصف :
+            </th>
+            <th> العمليات </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BirthDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClassRoom.Id)
+            </td>
+                <td>
+                    <button type="button" class="btn btn-warning">
+                        <i class="bi bi-pencil-square"></i> <a href="@Url.Action("Edit", "Students" )?id=@item.Id">تعديل </a>
+
+                    </button>
+                    <button type="button" class="btn btn-info">
+                        <i class="bi bi-list-columns-reverse">  </i>  <a href="@Url.Action("Details", "Students" )?id=@item.Id">تفاصيل</a>
+                    </button>
+                    <button type="button" class="btn btn-danger"><i class="bi bi-trash3"></i> <a href="@Url.Action("Delete", "Students" )?id=@item.Id">حذف</a></button>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>

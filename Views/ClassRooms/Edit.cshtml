@@ -1,0 +1,35 @@
+﻿@model SchoolManagementSystemASPProject.Models.ClassRoom
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<h1 class="row justify-content-center " style="margin-top:150px; ">تعديل الفصول الدراسية</h1>
+<hr />
+
+<div class="row justify-content-center ">
+    <div class="col-md-4">
+        <form asp-action="Edit" style="border: 1px solid #ccc; padding: 50px; border-radius: 5px;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">اسم الصف :</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group row justify-content-center">
+                <input type="submit" value="حفـــــظ" class="btn btn-primary" style="width:120px" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div style="direction:ltr; margin-bottom: 350px" ;>
+    <a asp-action="Index" class="btn btn-secondary">العودة للقائمة</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

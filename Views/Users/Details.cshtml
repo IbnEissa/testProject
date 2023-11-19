@@ -1,0 +1,58 @@
+﻿@model SchoolManagementSystemASPProject.Models.User
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="row justify-content-center " style="margin-top:150px; ">تفاصيل المستخدمين </h1>
+<hr />
+
+<div class="row justify-content-center ">
+    <dl class="row">
+        <dt class = "col-sm-2">
+         نوع الحساب : 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.account_type)
+        </dd>
+        <dt class = "col-sm-2">
+          الاسم : 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.name)
+        </dd>
+        <dt class = "col-sm-2">
+           إسم المستخدم : 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.userName)
+        </dd>
+        <dt class = "col-sm-2">
+         كلمة المرور : 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.password)
+        </dd>
+        <dt class = "col-sm-2">
+         الحالة : 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.state)
+        </dd>
+        <dt class = "col-sm-2">
+         التهيئة : 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.initialization)
+        </dd>
+    </dl>
+</div>
+<div>
+    <button type="button" class="btn btn-warning">
+        <i class="bi bi-pencil-square"></i>  <a asp-action="Edit" asp-route-id="@Model?.Id">تعديل</a>
+
+    </button>
+    <div style="direction:ltr; margin-bottom: 350px" ;>
+        <a asp-action="Index" class="btn btn-secondary">العودة للقائمة</a>
+    </div>
+</div>

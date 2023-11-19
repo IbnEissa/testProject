@@ -1,0 +1,82 @@
+﻿@model SchoolManagementSystemASPProject.Models.TeacherTb
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1 class="row justify-content-center " style="margin-top:150px; ">حذف المعلمين  </h1>
+<hr />
+
+<h3>هل حقا تريد الحذف ؟</h3>
+<div class="row justify-content-center ">
+    <dl class="row">
+        <dt class = "col-sm-2">
+            الاسم :
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            الهاتف :
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class = "col-sm-2">
+          نوع الوردية : 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Shift_type)
+        </dd>
+        <dt class = "col-sm-2">
+         التخصص : 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.major)
+        </dd>
+        <dt class = "col-sm-2">
+          المهمة: 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.task)
+        </dd>
+        <dt class = "col-sm-2">
+         سنوات الخبرة : 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.exceperiance_years)
+        </dd>
+        <dt class = "col-sm-2">
+            المؤهل : 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.qualification)
+        </dd>
+        <dt class = "col-sm-2">
+         سنة الحصول على المؤهل : 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.date_qualification)
+        </dd>
+        <dt class = "col-sm-2">
+         الحالة : 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.state)
+        </dd>
+        <dt class = "col-sm-2">
+         لدية بصمة : 
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.fingerPrintData)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="حـــذف" class="btn btn-danger" />
+        <div style="direction:ltr; margin-bottom: 350px" ;>
+            <a asp-action="Index" class="btn btn-secondary">العودة للقائمة</a>
+        </div>
+    </form>
+</div>

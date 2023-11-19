@@ -1,0 +1,58 @@
+﻿@model SchoolManagementSystemASPProject.Models.User
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="row justify-content-center " style="margin-top:150px; ">تعديل المستخدمين </h1>
+<hr />
+
+<div class="row justify-content-center ">
+    <div class="col-md-4">
+        <form asp-action="Edit" style="border: 1px solid #ccc; padding: 50px; border-radius: 5px;">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="account_type" class="control-label"> نوع الحساب : </label>
+                <input asp-for="account_type" class="form-control" />
+                <span asp-validation-for="account_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="name" class="control-label">الاسم : </label>
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userName" class="control-label">إسم المستخدم : </label>
+                <input asp-for="userName" class="form-control" />
+                <span asp-validation-for="userName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="password" class="control-label">كلمة المرور : </label>
+                <input asp-for="password" class="form-control" />
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="state" class="control-label">الحالة : </label>
+                <input asp-for="state" class="form-control" />
+                <span asp-validation-for="state" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="initialization" class="control-label">التهيئة : </label>
+                <input asp-for="initialization" class="form-control" />
+                <span asp-validation-for="initialization" class="text-danger"></span>
+            </div>
+            <div class="form-group row justify-content-center">
+                <input type="submit" value="حفـــــظ" class="btn btn-primary" style="width:120px" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div style="direction:ltr; margin-bottom: 350px" ;>
+    <a asp-action="Index" class="btn btn-secondary">العودة للقائمة</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

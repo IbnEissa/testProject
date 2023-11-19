@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SchoolManagementSystemASP</title>
+    <link href="~/assets/img/favicon.png" rel="icon">
+    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="~/assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header" class="fixed-top">
+        <div dir="rtl" class="container d-flex align-items-center justify-content-between">
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li>
+                        <h1 class="logo" style="border-radius:20px">
+                            <img src="~/images/schoolLogo.webp">
+                        </h1>
+                    </li>
+                    <li><span>@Html.ActionLink("الرئيسية", "Index", "Home")</span> <i class="nav-link scrollto"></i></li>
+
+                    <li class="dropdown">
+                        <a href="#">شـؤن الطـــــلاب  <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+
+                            <li>@Html.ActionLink("عرض الطـــلاب", "Index", "StudentTbs")</li>
+                            <li>@Html.ActionLink("جدول حصص الـــطلاب", "Index", "StudentTbs")</li>
+                            <li>@Html.ActionLink("تقارير الـــطلاب", "Index", "StudentTbs")</li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">شـؤن الموظفـين <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li class="dropdown">
+                                <a href="#"><span>عــــرض</span> <i class="bi bi-chevron-left"></i></a>
+                                <ul class="left-dropdown">
+                                    <li> <a href="#"><span>@Html.ActionLink("المعلمـــــين", "Index", "TeacherTbs")</span> <i class="nav-link scrollto"></i></a></li>
+                                    <li> <a href="#"><span>@Html.ActionLink("مجلس الابـــاء", "Index", "BoardParents")</span> <i class="nav-link scrollto"></i></a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="dropdown">
+                                <a href="#"><span>حركـــة الموظفـين</span> <i class="bi bi-chevron-left"></i></a>
+                                <ul>
+                                    <li><span>@Html.ActionLink("سحب الحضور والغيـــاب", "Index", "Students")</span> <i class="nav-link scrollto"></i></li>
+                                    <li><span>@Html.ActionLink("عرض الحضور والغيـــاب", "Index", "Students")</span> <i class="nav-link scrollto"></i></li>
+                                    <li><span>@Html.ActionLink("عرض حسب الورديات ", "Index", "Students")</span> <i class="nav-link scrollto"></i></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">التــــــــــــقارير<i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="@Url.Action("StudentsReports", "StudentTbs")">تقارير الطلاب</a></li>
+                            <li>@Html.ActionLink("تقارير الموضفين", "StudentsReports", "StudentTbs")</li>
+                        </ul>
+                    </li>
+
+
+
+                    <li class="dropdown">
+                        <a href="#">الإعـــــــــدادات<i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li>@Html.ActionLink("المستــــخدمين", "Index", "Users")</li>
+                            <li>@Html.ActionLink("الصلاحيـــات", "Index", "StudentTbs")</li>
+                            <li>@Html.ActionLink("جهـــاز البصمـــة", "Index", "Students")</li>
+                            <li>@Html.ActionLink("بيانات المدرســـة", "Index", "Schools")</li>
+                            <li>@Html.ActionLink("بيانات الصفوف", "Index", "ClassRooms")</li>
+                            <li>@Html.ActionLink("بيانات المواد", "Index", "Students")</li>
+                            <li>@Html.ActionLink("بيانات حصص الترم", "Index", "Students")</li>
+                            <li>@Html.ActionLink("بيانات حصص الترم", "Index", "Students")</li>
+                            <li>@Html.ActionLink("الورديـــات", "Index", "Students")</li>
+                            <li>@Html.ActionLink("المواد", "Index", "Subjects")</li>
+                            <li>@Html.ActionLink("نسخــة احتياطيــة", "Index", "Students")</li>
+                        </ul>
+                    
+                    </li>
+
+                    <li><span>@Html.ActionLink("المطــــورون", "Privacy", "Home")</span> <i class="nav-link scrollto"></i></li>
+
+                </ul>
+
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+            <p dir="ltr"> <span>نظام إدارة المدرسة</span> <i class="nav-link scrollto"></i></p>
+              
+            
+        </div>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer style="background-color: #f2f2f2; padding: 20px;" class="border-top footer text-muted">
+        
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 14px; color: #666;">نظام اداري يستخدم لتسجيل وحفظ بيانات الطلاب والمعلمين واستخدام بصمة الحضور والانصراف لإدارة الموارد البشرية بشكل أفضل والعمليات المالية واستخراج التقارير المطلوبة لمساعدة إدارة المدرسة والعاملين في أداء الاعمال المرتبطة بهم بكل سهولة واستخراج التقارير المطلوبة وكذلك مشاركة البيانات بالشكل الذي يرغب به المستخدم.</p>
+            <p style="font-size: 12px; color: #999;">جميع الحقوق محفوظة &copy; 2023</p>
+            <h1 class="logo" style="border-radius:20px">
+                <img src="~/images/schoolLogo.webp" width="50px" style=" border-radius: 25px; justify-content: left;" height="50px">
+            </h1>
+        </div>
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        @await RenderSectionAsync("Scripts", required: false)
+    </footer>
+  
+</body>
+</html>

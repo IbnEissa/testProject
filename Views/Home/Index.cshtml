@@ -1,0 +1,128 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+}
+   
+
+<div class="hero-section" style="background-color: #f2f2f2; padding: 20px;">
+    <img src="~/images/schoolLogo.webp" width="50px" style=" border-radius: 25px; justify-content: left;" height="50px">
+    <h1 dir="rtl" id="hero-h1" style="background-color: #f2f2f2; padding-bottom: 0px;">نظام إدارة المدرسة</h1>
+    <h2>
+        نظام اداري يستخدم لتسجيل وحفظ بيانات الطلاب والمعلمين واستخدام بصمة الحضور والانصراف لإدارة الموارد البشرية بشكل أفضل والعمليات المالية واستخراج التقارير المطلوبة لمساعدة إدارة المدرسة والعاملين في أداء الاعمال المرتبطة بهم بكل سهولة واستخراج التقارير المطلوبة وكذلك مشاركة البيانات بالشكل الذي يرغب به المستخدم.
+    </h2>
+    <img class="card-img-top" src="~/images/school.jpg" alt="Card image cap">
+</div>
+
+<main>
+    <section class="about-section">
+        <div class="alert alert-primary" role="alert">
+            الوضائف التي يقدمها النظام
+        </div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        تسجيل البيانات
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">يمكن للمستخدمين تسجيل بيانات المستخدمين الجدد في النظام، مثل بيانات الطلاب والمعلمين، بما في ذلك المعلومات الشخصية والتعليمية والوظيفية.</div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            إدارة الموارد البشرية
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body"> يمكن للمستخدمين استخدام النظام لإدارة الموارد البشرية في المدرسة، مثل تسجيل الحضور والانصراف للمعلمين وحساب الرواتب والمزايا.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        العمليات المالية
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"> يمكن للمستخدمين إدارة العمليات المالية في المدرسة، مثل تسجيل الدفعات والفواتير وإدارة حسابات المدرسة.</div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        استخراج التقارير
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body"> يمكن للمستخدمين استخراج التقارير المطلوبة من النظام، مثل تقارير الحضور والغياب، وتقارير أداء الطلاب والمعلمين، وتقارير المالية.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="navigation-section" style="background-color: #f2f2f2; padding: 20px" ;>
+        <h2>البيانات الاساسية </h2>
+        <div style=" display: flex; justify-content: center;">
+            <section class="navigation-section">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="~/images/teacher.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">المعلمين</h5>
+                        <p class="card-text">تسجيل وحفظ بيانات المعلمين واستخدام بصمة الحضور والانصراف لإدارة المعلمين .</p>
+                        <a href="@Url.Action("Index", "TeacherTbs")" class="btn btn-primary">تسجيل</a>
+                    </div>
+                </div>
+            </section>
+            <section class="navigation-section">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="~/images/student.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">الطـــلاب</h5>
+                        <p class="card-text">تسجيل وحفظ بيانات الطلاب وكذلك مشاركة البيانات بالشكل الذي يرغب به المستخدم.</p>
+                        <a href="@Url.Action("Index", "StudentTbs")" class="btn btn-primary">تسجيل</a>
+                    </div>
+                </div>
+            </section>
+            <section class="navigation-section">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="~/images/user.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">المستخدمون</h5>
+                        <p class="card-text"> تتنوع العمليات والوظائف المتاحة للمستخدمين حسب صلاحياتهم ومستوى الوصول الممنوح لهم في النظام تهدف هذه العمليات والوظائف إلى تسهيل إدارة المدرسة وتحسين تجربة المستخدمين  ..</p>
+                        <a href="@Url.Action("Index", "Users")" class="btn btn-primary">تسجيل</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <section class="navigation-section" style="background-color: #f2f2f2; padding: 20px" ;>
+        <h2>التقارير </h2>
+        <div class="buttons-container">
+            <a href="@Url.Action("Index", "StudentTbs")" class="option-button">
+                <i class="bi bi-person-workspace icon-m"></i>
+                <span class="button-title">تقارير الطـــلاب</span>
+            </a>
+            <a href="@Url.Action("Index", "TeacherTbs")" class="option-button">
+                <i class="bi bi-person-badge-fill icon-m"></i>
+                <span class="button-title">تقارير المعلـــمين</span>
+            </a>
+            <a href="@Url.Action("Index", "Users")" class="option-button">
+                <i class="bi bi-person-workspace icon-m"></i>
+                <span class="button-title">تقارير المستخدمين</span>
+            </a>
+        </div>
+    </section>
+
+
+
+
+
+</main>
